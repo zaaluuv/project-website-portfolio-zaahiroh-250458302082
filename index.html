@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head class="scroll-smooth">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="src/output.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.jpeg" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <style>
+    .font-nunito {
+      font-family: "Nunito", sans-serif;
+    }
+
+    .text-blue {
+      color: rgb(93, 93, 255);
+    }
+  </style>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav
+      class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur border-b border-slate-300"
+      aria-label="Primary"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg-px:-8">
+        <!-- untuk menu laptop -->
+        <div class="flex items-center justify-between h-16">
+          <a
+            href="#"
+            class="flex items-center text-white text-xl font-nunito uppercase tracking-wider font-semibold"
+            >zaa</a
+          >
+
+          <button
+            id="hamburger"
+            class="md:hidden p-2 rounded hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            aria-expanded="false"
+            aria-controls="main-menu"
+            aria-label="Toggle menu"
+          >
+            <svg
+              id="icon-open"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+            <svg
+              id="icon-close"
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-6 w-6 hidden"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+
+          <div id="main-menu" class="hidden md:flex md:items-center md:gap-2">
+            <div
+              class="flex flex-col md:flex-row md:items-center md:gap-2 text-right md:text-left"
+            >
+              <a
+                href="#aboutMe"
+                class="px-3 py-2 text-slate-300 hover:text-blue-400 uppercase font-nunito font-bold"
+                >About Me</a
+              >
+              <a
+                href="#whatIDo"
+                class="px-3 py-2 text-slate-300 hover:text-blue-400 uppercase font-nunito font-bold"
+                >What I Do</a
+              >
+              <a
+                href="#portfolio"
+                class="px-3 py-2 text-slate-300 hover:text-blue-400 uppercase font-nunito font-bold"
+                >Portfolio</a
+              >
+              <a
+                href="#mySkill"
+                class="px-3 py-2 text-slate-300 hover:text-blue-400 uppercase font-nunito font-bold"
+                >Skills</a
+              >
+              <a
+                href="#testimoni"
+                class="px-3 py-2 text-slate-300 hover:text-blue-400 uppercase font-nunito font-bold"
+                >Testimonial</a
+              >
+              <a
+                href="#contactMe"
+                class="bg-blue-500 hover:bg-blue-300 rounded-xl px-4 py-2 font-nunito font-bold text-slate-200"
+                >Contact Me</a
+              >
+            </div>
+          </div>
+
+          <!-- manu untuk hp -->
+          <div
+            id="mobile-panel"
+            class="md:hidden hidden border-t border-slate-800 py-2"
+          >
+            <a
+              href="#aboutMe"
+              class="block px-3 py-2 text-slate-300 hover:bg-blue-300 rounded-xl uppercase font-nunito"
+              >About Me</a
+            >
+            <a
+              href="#whatIDo"
+              class="block px-3 py-2 text-slate-300 hover:bg-blue-300 rounded-xl uppercase font-nunito"
+              >What I Do</a
+            >
+            <a
+              href="#"
+              class="block px-3 py-2 text-slate-300 hover:bg-blue-300 rounded-xl uppercase font-nunito"
+              >Portfolio</a
+            >
+            <a
+              href="#"
+              class="block px-3 py-2 text-slate-300 hover:bg-blue-300 rounded-xl uppercase font-nunito"
+              >Skills</a
+            >
+            <a
+              href="#"
+              class="block px-3 py-2 text-slate-300 hover:bg-blue-300 rounded-xl uppercase font-nunito"
+              >Blog</a
+            >
+            <a
+              href="#"
+              class="block bg-blue-500 hover:bg-blue-300 rounded-xl px-4 py-2 font-nunito font-bold text-slate-200 justify-center items-center"
+              >Contact Me</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ABOUT ME -->
+    <section id="aboutMe" class="bg-slate-800">
+      <div
+        class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 grid md:grid-cols-2 gap-10 items-center"
+      >
+        <div
+          class="order-2 lg:order-2 border-[12px] sm:border-[16px] border-slate-900 rounded-2xl shadow-2xl overflow-hidden"
+        >
+          <img
+            src="media/fairy.jpeg"
+            alt=""
+            class="w-full h-full object-cover"
+          />
+        </div>
+
+        <div class="order-1 lg:order-1">
+          <h1 class="font-nunito text-5xl font-bold leading-tight text-white">
+            Hello, I'm <span class="text-blue">Zaar</span>
+          </h1>
+          <h2 class="font-nunito text-3xl font-semibold text-slate-200">
+            Web / Mobile Developer
+          </h2>
+          <p class="mt-5 leading-relaxed text-slate-200 font-nunito">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            repellendus fugit maxime laudantium. Facilis, in iusto assumenda
+            consequuntur nihil aliquam! Tempora perferendis optio porro odio
+            minima vitae, quos et ut!
+          </p>
+
+          <div class="mt-6 flex flex-wrap items-center gap-4">
+            <a
+              href="https://www.linkedin.com/in/zaahiroh-zaa-a721a1371/"
+              class="inline-flex items-center justify-center rounded-lg bg-slate-900 hover:bg-blue-500 text-white px-4 py-3"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+
+            <a
+              href="https://www.github.com/zaaluuv/"
+              class="inline-flex items-center justify-center rounded-lg bg-slate-900 hover:bg-blue-500 text-white px-4 py-3"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+
+            <a
+              href="https://youtube.com/@zwoify?si=GI4MLtDG6CNiVhbu"
+              class="inline-flex items-center justify-center rounded-lg bg-slate-900 hover:bg-blue-500 text-white px-4 py-3"
+            >
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+
+            <a
+              href="https://www.instagram.com/zwoify/"
+              class="inline-flex items-center justify-center rounded-lg bg-slate-900 hover:bg-blue-500 text-white px-4 py-3"
+            >
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT I DO -->
+    <section id="whatIDo" class="bg-slate-900">
+      <div
+        class="max-w-8xl mx-auto px-4 md:px-8 py-20 border-t border-slate-600"
+      >
+        <div class="text-center mb-12">
+          <h2
+            class="text-3xl font-bold font-nunito text-slate-200 underline underline-offset-8 decoration-blue-500 decoration-4 uppercase tracking-wider"
+          >
+            What I Do
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- grid 1 -->
+          <div class="rounded-xl bg-slate-800/70 shadow-2xl p-6">
+            <div class="flex items-center gap-3 mb-3">
+              <div
+                class="w-10 h-10 grid rounded-full bg-slate-900 text-white place-items-center"
+              >
+                <i class="fa-solid fa-desktop"></i>
+              </div>
+              <h3
+                class="text-slate-100 font-nunito font-bold text:lg tracking-wider"
+              >
+                Web Design
+              </h3>
+            </div>
+            <p class="text-slate-200 font-nunito">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error, a
+              corrupti! Vitae a consectetur nihil id, accusantium aperiam harum
+              quidem error itaque sunt aliquid earum quod voluptates dolores,
+              fugit sit.
+            </p>
+          </div>
+
+          <!-- grid 2 -->
+          <div class="rounded-xl bg-slate-800/70 shadow-2xl p-6">
+            <div class="flex items-center gap-3 mb-3">
+              <div
+                class="w-10 h-10 grid rounded-full bg-slate-900 text-white place-items-center"
+              >
+                <i class="fa-solid fa-mobile-screen"></i>
+              </div>
+              <h3
+                class="text-slate-100 font-nunito font-bold text:lg tracking-wider"
+              >
+                App Design
+              </h3>
+            </div>
+            <p class="text-slate-200 font-nunito">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
+              tempora ratione sed natus maiores inventore hic temporibus
+              reiciendis, officiis culpa ducimus quam, nam voluptas aliquid
+              facere iusto vel velit harum.
+            </p>
+          </div>
+
+          <!-- grid 3 -->
+          <div class="rounded-xl bg-slate-800/70 shadow-2xl p-6">
+            <div class="flex items-center gap-3 mb-3">
+              <div
+                class="w-10 h-10 grid rounded-full bg-slate-900 text-white place-items-center"
+              >
+                <i class="fa-solid fa-globe"></i>
+              </div>
+              <h3
+                class="text-slate-100 font-nunito font-bold text:lg tracking-wider"
+              >
+                Branding
+              </h3>
+            </div>
+            <p class="text-slate-200 font-nunito">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatum sit at et laborum repellat provident recusandae quo.
+              Mollitia dolores incidunt, rem dolorum nemo inventore at odio,
+              ipsa minima alias ex.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio" class="bg-slate-900">
+      <div
+        class="max-w-8xl mx-auto px-4 md:px-8 py-20 border-t border-slate-600"
+      >
+        <div class="text-center mb-12">
+          <h2
+            class="text-3xl font-bold font-nunito text-slate-200 underline underline-offset-8 decoration-blue-500 decoration-4 uppercase tracking-wider"
+          >
+            PORTFOLIO
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- grid 1 -->
+          <div class="rounded-xl bg-slate-800/70 shadow-2xl p-6">
+              <a href="https://youtu.be/G2ABttFeUOU?si=ZOPMpn7hcPcHils1" class=" items-center gap-3 mb-3">
+                <img
+                  src="media/Screenshot 2025-09-04 095137.png"
+                  alt=""
+                  class="rounded-2xl"
+                />
+                <h1 class="text-white text-[25px] text-center py-2 font-semibold">
+                  Landing Page With CSS External
+                </h1>
+                <p class="text-slate-200 text-center font-nunito">
+                  Making web portfolio with CSS External
+                </p>
+              </a>
+          </div>
+
+          <!-- grid 2 -->
+          <div class="rounded-xl bg-slate-800/70 shadow-2xl p-6">
+              <a href="https://youtu.be/R3rjyjUBiDI?si=3Lc3LES3-ltPbPTx" class=" items-center gap-3 mb-3">
+                <img
+                  src="media/Screenshot 2025-09-04 095223.png"
+                  alt=""
+                  class="rounded-2xl"
+                />
+                <h1 class="text-white text-[25px] text-center py-2 font-semibold">
+                  Landing Page With TailwindCSS
+                </h1>
+                <p class="text-slate-200 text-center font-nunito">
+                  Making landing page about cafe with Tailwind CSS
+                </p>
+              </a>
+          </div>
+
+          <!-- grid 3 -->
+          <div class="rounded-xl bg-slate-800/70 shadow-2xl p-6">
+              <a href="https://youtu.be/xNW1olPcE0Q?si=I1zjjSIt1STveVot" class=" items-center gap-3 mb-3">
+                <img
+                  src="media/Screenshot 2025-09-04 095344.png"
+                  alt=""
+                  class="rounded-2xl"
+                />
+                <h1 class="text-white text-center text-[25px] py-2 font-semibold">
+                  Landing Page With TailwindCSS
+                </h1>
+                <p class="text-slate-200 text-center font-nunito">
+                  Making landing page about book with Tailwind CSS
+                </p>
+              </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MY SKILL -->
+    <section id="mySkill" class="bg-slate-800 text-white py-20 border-t border-slate-600">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold font-nunito text-slate-200 underline underline-offset-8 decoration-blue-500 decoration-4 uppercase tracking-wider">My Skill</h2>
+      </div>
+
+      <div class="text-white py-3 mb-6 leading-10">
+        <h1 class="font-bold text-[28px]">Web Developer</h1>
+        <p>I have skills like the following</p>
+      </div>
+
+      <div class="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-4 gap-6 justify-center">
+      <!-- Skill Icons -->
+        <div class="rounded-xl bg-slate-900/70 shadow-2xl p-6 flex items-center justify-center">
+          <img src="media/ai.png" alt="Adobe Illustrator" class="h-15 w-16" />
+        </div>
+        
+        <div class="rounded-xl bg-slate-900/70 shadow-2xl p-6 flex items-center justify-center">
+          <img src="media/ps.png" alt="Photoshop" class="h-16 w-16" />
+        </div>
+        
+        <div class="rounded-xl bg-slate-900/70 shadow-2xl p-6 flex items-center justify-center">
+          <img src="media/html5.png" alt="HTML5" class="h-12 w-12" />
+        </div>
+        
+        <div class="rounded-xl bg-slate-900/70 shadow-2xl p-6 flex items-center justify-center">
+          <img src="media/js.jpeg" alt="JavaScript" class="h-10 w-10" />
+        </div>
+
+        <div class="rounded-xl bg-slate-900/70 shadow-2xl p-6 flex items-center justify-center">
+          <img src="media/xd.png" alt="Adobe XD" class="h-12 w-12" />
+        </div>
+        
+        <div class="rounded-xl bg-slate-900/70 shadow-2xl p-6 flex items-center justify-center">
+          <img src="media/Blender_software_logo-removebg-preview.png" alt="Blender" class="h-11 w-12" />
+        </div>
+        
+        <div class="rounded-xl bg-slate-900/70 shadow-2xl p-6 flex items-center justify-center">
+          <img src="media/sketch.png" alt="Sketch" class="h-11 w-11" />
+        </div>
+        
+        <div class="rounded-xl bg-slate-900/70 shadow-2xl p-6 flex items-center justify-center">
+          <img src="media/figma.png" alt="Figma" class="h-18 w-18" />
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section id="testimoni" class="bg-slate-900 text-white py-20 border-t border-slate-600">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold font-nunito text-slate-200 underline underline-offset-8 decoration-blue-500 decoration-4 uppercase tracking-wider">Testimonial</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <!-- Testimoni Card -->
+      <div class="bg-slate-800/70 p-6 rounded-lg shadow-lg">
+        <div class="flex gap-4 mb-4">
+          <div class="text-center">
+            <p class="text-slate-300 font-bold text-sm underline underline-offset-15 decoration-white-100">Aug</p>
+            <p class="text-white text-xl font-bold py-5">24</p>
+          </div>
+          <div class="leading-10">
+            <h4 class="text-blue font-semibold uppercase text-sm">Jane Doe</h4>
+            <h3 class="text-lg font-bold text-white leading-8">Review Jasa Website</h3>
+            <p class="text-slate-300 text-sm">Jasanya bagus, good job dan cepat</p>
+            <a href="#" class="text-blue font-semibold text-sm hover:underline">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-slate-800/70 p-6 rounded-lg shadow-lg">
+        <div class="flex gap-4 mb-4">
+          <div class="text-center">
+            <p class="text-slate-300 font-bold text-sm underline underline-offset-15 decoration-white-100">Aug</p>
+            <p class="text-white text-xl font-bold py-5">24</p>
+          </div>
+          <div class="leading-10">
+            <h4 class="text-blue font-semibold uppercase text-sm">Jane Doe</h4>
+            <h3 class="text-lg font-bold text-white leading-8">Review Jasa Website</h3>
+            <p class="text-slate-300 text-sm">Jasanya bagus, good job dan cepat</p>
+            <a href="#" class="text-blue font-semibold text-sm hover:underline">Read More</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-slate-800/70 p-6 rounded-lg shadow-lg">
+        <div class="flex gap-4 mb-4">
+          <div class="text-center">
+            <p class="text-slate-300 font-bold text-sm underline underline-offset-15 decoration-white-100">Aug</p>
+            <p class="text-white text-xl font-bold py-5">24</p>
+          </div>
+          <div class="leading-10">
+            <h4 class="text-blue font-semibold uppercase text-sm">Jane Doe</h4>
+            <h3 class="text-lg font-bold text-white leading-8">Review Jasa Website</h3>
+            <p class="text-slate-300 text-sm">Jasanya bagus, good job dan cepat</p>
+            <a href="#" class="text-blue font-semibold text-sm hover:underline">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT ME -->
+  <section id="contactMe" class="bg-slate-800 text-white py-20 border-t border-slate-600">
+  <div class="max-w-xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold font-nunito text-slate-200 underline underline-offset-8 decoration-blue-500 decoration-4 uppercase tracking-wider">Contact Me</h2>
+      <p class="mt-2 text-slate-300">Hubungi kami jika ingin bekerja sama</p>
+    </div>
+
+    <form class="bg-slate-700/70 p-6 rounded-lg shadow-lg space-y-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label for="email" class="block text-sm font-semibold text-white uppercase mb-2">name</label>
+          <input type="text" placeholder="ㅤ" class="w-full px-4 py-2 bg-slate-800 text-white rounded border border-slate-500" />
+        </div>
+        
+        <div>
+          <label for="email" class="block text-sm font-semibold text-white uppercase mb-2">email</label>
+          <input type="email" placeholder="ㅤ" class="w-full px-4 py-2 bg-slate-800 text-white rounded border border-slate-500" />
+        </div>
+
+        <div class="w-full col-span-2">
+          <label for="email" class="block text-sm font-semibold text-white uppercase mb-2">Message</label>
+          <textarea placeholder="ㅤ" rows="5" class="px-4 py-2 bg-slate-800 text-white rounded border border-slate-500 w-full"></textarea>
+        </div>
+      </div>
+      
+      <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded-xl hover:bg-blue-600">Send Message</button>
+    </form>
+  </div>
+</section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-white py-12">
+  <div class="max-w-7xl mx-auto px-4 md:px-8">
+    <div class="grid md:grid-cols-2 gap-8">
+      <div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3118.934091803828!2d107.0396498374672!3d-6.5262912289995345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69bc6f106ae121%3A0xa63c302de778cf12!2sIDN%20Boarding%20School%20Putri!5e1!3m2!1sid!2sid!4v1756964546468!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">"
+          width="100%" height="250" allowfullscreen="" loading="lazy"
+          class="rounded-lg border-2 border-slate-700"
+        ></iframe>
+        <p class="mt-4 text-lg font-semibold">
+          Jl. Raya Jonggol-Dayeuh, Sukanegara, Kec. Jonggol, <br> Kabupaten Bogor, Jawa Barat 16830
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+        <!-- Page -->
+        <div>
+          <h4 class="text-md font-bold text-white mb-2">PAGE</h4>
+          <ul class="text-sm text-slate-300 space-y-1 list-disc list-inside">
+            <li>About Me</li>
+            <li>What I Do</li>
+            <li>Portfolio</li>
+            <li>My Skills</li>
+            <li>Testimonial</li>
+            <li>Contact</li>
+          </ul>
+        </div>
+
+        <!-- MY SKILLS -->
+        <div>
+          <h4 class="text-md font-bold text-white mb-2">My Skills</h4>
+          <ul class="text-sm text-slate-300 space-y-1 list-disc list-inside">
+            <li>Adobe Illustrator</li>
+            <li>Photoshop</li>
+            <li>HTML5</li>
+            <li>JavaScript</li>
+            <li>Adobe XD</li>
+            <li>Blender</li>
+            <li>Sketch</li>
+            <li>Figma</li>
+          </ul>
+        </div>
+
+        <!-- PROJECT -->
+        <div>
+          <h4 class="text-md font-bold text-white mb-2">PROJECT</h4>
+          <ul class="text-sm text-slate-300 space-y-1 list-disc list-inside">
+            <li>Landing Page With CSS External</li>
+            <li>Landing Page With Tailwind CSS</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright -->
+    <div class="mt-12 text-center text-sm text-slate-400">
+      Copyright © 2024 — All Rights Reserved by <span class="text-white font-semibold">ZAAR</span>
+    </div>
+  </div>
+</footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)"
+      ).matches;
+      AOS.init({
+        duration: reduceMotion ? 0 : 600,
+        once: true,
+      });
+
+      const btn = document.getElementById("hamburger");
+      const iconOpen = document.getElementById("icon-open");
+      const iconClose = document.getElementById("icon-close");
+      const menu = document.getElementById("main-menu");
+      const panel = document.getElementById("mobile-panel");
+
+      btn?.addEventListener("click", () => {
+        const expanded = btn.getAttribute("aria-expanded") === "true";
+        btn.setAttribute("aria-expanded", String(!expanded));
+        iconOpen.classList.toggle("hidden");
+        iconClose.classList.toggle("hidden");
+        panel.classList.toggle("hidden");
+      });
+
+      panel?.querySelectorAll("a").forEach((a) => {
+        a.addEventListener("click", () => {
+          btn.setAttribute("aria-expanded", "false");
+          iconOpen.classList.remove("hidden");
+          iconClose.classList.add("hidden");
+          panel.classList.add("hidden");
+        });
+      });
+    </script>
+  </body>
+</html>

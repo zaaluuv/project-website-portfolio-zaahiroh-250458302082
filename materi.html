@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <!-- - kalau pakai block lebarnya 1 layar device, jadi setiap kali nambahin item bakal turun ke bawah, karena sampingnya full. -->
+    <div class="bg-blue-300 block">Kotak 1 (block)</div>
+    <div class="bg-blue-500 block">Kotak 2 (block)</div>
+
+    <br>
+    <!-- - Inline perginya ke samping, tapi kalau pakai inline gabisa atur tinggi (height) & lebar (width), gedenya menyesuaikan konten -->
+    <span class="bg-pink-300 inline">Kotak 1 (inline)</span>
+    <span class="bg-pink-500 inline">Kotak 2 (inline)</span>
+
+    <br> <br>
+    <!-- kalau br 2 berarti enternya/jaraknya ada 2/lbh panjang -->
+    <!-- - Pakai inline block bisa ke samping dan w sama h bisa kita atur.
+    - div = pembungkus, span = tulisan kayak p.
+    -->
+    <span class="bg-green-300 inline-block w-24 h-12">Kotak 1</span>
+    <span class="bg-green-300 inline-block w-24 h-12">Kotak 2</span>
+
+    <br>
+    <!-- - Flex secara default horizontal, kalau mau ke bawah/vertikal bisa pakai flex-col.
+    - Flex biasanya temenan/berdampingan Justify, Gap, Item.
+    - Kalau mau nyusun element sejajar secara horizontal/vertikal, layout rata kanan kiri, items di tengah, bisa pakai flex, tinggal pakaiin temannya.
+    - Justify = Atur arah horizontal.
+    - Items = Atur arah vertikal.
+    - Gap = Atur jarak antar item.
+    - kalau prettier ada warna merah berarti ada yg gaberes, prettier di pojok kanan bawah laptop.
+    - x = kanan kiri (horizontal), y = atas bawah
+    -->
+    <div class="flex gap-2 bg-yellow-100 p-2">
+        <div class="bg-yellow-300 w-16 h-16">A</div>
+        <div class="bg-yellow-500 w-16 h-16">B</div>
+        <div class="bg-yellow-700 w-16 h-16">C</div>
+    </div>
+    <br>
+    <div class="flex flex-col gap-2 bg-yellow-100 p-2">
+        <div class="bg-yellow-300 w-16 h-16">A</div>
+        <div class="bg-yellow-500 w-16 h-16">B</div>
+        <div class="bg-yellow-700 w-16 h-16">C</div>
+    </div>
+</body>
+</html>
+
+<!-- BAGIAN NAV & LOGO/ZAAR
+    - z index untuk menumpuk element, biasanya supaya dia selalu di depan jika ada element yang menumpuk
+    kalau bg/warna custom pakai [#], jadi bg-[#], kalau bkn custom lgsg tulis warnanya, jd bg-blue.
+    - Sticky biar nempel, top biar di atas.
+    - npx yang (npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch) harus tetap ada watch/ harus tetap nyala di terminal supaya tetap hidup.
+    - mx = sumbu x, my = sumbu y. m margin, p padding jarak di dalam (my py mx px), gap = jarak semua kotak.
+    - (bg-slate-900/90) /90 merupakan opacity.
+    - tailwind sudah ada aturannya, termasuk ukuran, 1 = 4px, jd kelipatan 4.
+    - Aria opsional, tapi klo di tambahin bisa jadi website profesional, karena bisa untuk disabilitas friendly jadi bisa baca settingan milik mereka, pakai label karena nav termasuk menu utama.
+    - kita mau buat div untuk menu & mobile, jd buat 2 div dalam 1 div.
+    - Text xl = 20px.
+    - tracking-wider = untuk ada jaraknya di teks.
+    -->
+
+    <!-- BAGIAN MAIN-MENU
+    - hidden supaya tersembunyi.
+    - md itu medium, jadi kalau tampilan webnya medium textnya ke kiri, karena kita pakai md:text-left.
+    - flex-col kalau tampilan mobile jadi kolom, md:flex-row kalau medium jadi baris 
+    -->
+
+    <!-- BAGIAN MENU UNTUK HP
+    - karena mau tampilan hp, jd kalau ukuran besar/medium, di hide (md:hidden)
+    -->
+
+    <!-- BAGIAN SECTION ABOUTME
+    - Kalau mau pakai md:grid-cols, sblmnya hrs pakai grid. 
+    - Untuk border di tailwind ada 2, border (biasanya untuk custom ketebalan) dan ring (ring semakin besar angkanya semakin tebal bordernya)
+    - Setiap ukuran custom di tailwind pakai []
+    - overflow-hidden gunanya untuk mencegah yang offset
+    - sm itu small/untuk hp
+    - order untuk urutan, misal grid nya 2, jadi kalau order 1 berarti di grid 1.
+    - w-full h-full object-cover agar.
+    - Biasanya kan di web ada banyak font/warna yang sama, nah bisa taruh di css internal bagian style, buat class yang bakal sering  di pakai. contoh
+    </head>
+    <style>
+        .font-nunito{
+            font-family: "Nunito", sans-serif;
+        }
+
+        .color-blue {
+            background-color: blue;
+        }
+    </style>
+    <body>
+
+    - Leading untuk jarak baris, kalau tracking untuk jarak huruf.
+    - flex untuk nambahin flexible, dan flex-wrap untuk atur supaya lebih rapih & tidak numpuk, karena tailwind defaultnya nowrap, jadi kalau kepenuhan bakal tetap sebaris dan ke bawah.
+    - ctrl d untuk duplikat ke bawah pada class yang sama.
+    -->
