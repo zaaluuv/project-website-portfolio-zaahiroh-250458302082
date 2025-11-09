@@ -45,13 +45,15 @@
             >zaa</a
           >
 
+          <!-- Tombol Hamburger -->
           <button
             id="hamburger"
-            class="md:hidden p-2 rounded hover:bg-slate-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            class="md:hidden p-2 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 absolute right-4 top-4 text-slate-400 hover:text-slate-200 transition"
             aria-expanded="false"
             aria-controls="main-menu"
             aria-label="Toggle menu"
           >
+            <!-- Icon Open (Hamburger) -->
             <svg
               id="icon-open"
               xmlns="http://www.w3.org/2000/svg"
@@ -59,14 +61,16 @@
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
+              stroke-width="2"
             >
               <path
                 stroke-linecap="round"
                 stroke-linejoin="round"
-                stroke-width="2"
                 d="M4 6h16M4 12h16M4 18h16"
               />
             </svg>
+
+            <!-- Icon Close (X) -->
             <svg
               id="icon-close"
               xmlns="http://www.w3.org/2000/svg"
@@ -74,13 +78,9 @@
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
+              stroke-width="2"
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M6 18L18 6M6 6l12 12"
-              />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
 
@@ -124,36 +124,36 @@
           <!-- manu untuk hp -->
           <div
             id="mobile-panel"
-            class="md:hidden hidden border-t border-slate-800 py-2"
+            class="fixed left-0 top-16 w-full hidden flex-col bg-slate-900 border-t border-slate-800 py-4 md:hidden z-40"
           >
             <a
               href="#aboutMe"
-              class="block px-3 py-2 text-slate-300 hover:bg-blue-300 rounded-xl uppercase font-nunito"
+              class="px-4 py-2 text-slate-300 hover:text-blue-400 uppercase font-nunito font-bold"
               >About Me</a
             >
             <a
               href="#whatIDo"
-              class="block px-3 py-2 text-slate-300 hover:bg-blue-300 rounded-xl uppercase font-nunito"
+              class="px-4 py-2 text-slate-300 hover:text-blue-400 uppercase font-nunito font-bold"
               >What I Do</a
             >
             <a
-              href="#"
-              class="block px-3 py-2 text-slate-300 hover:bg-blue-300 rounded-xl uppercase font-nunito"
+              href="#portfolio"
+              class="px-4 py-2 text-slate-300 hover:text-blue-400 uppercase font-nunito font-bold"
               >Portfolio</a
             >
             <a
-              href="#"
-              class="block px-3 py-2 text-slate-300 hover:bg-blue-300 rounded-xl uppercase font-nunito"
+              href="#mySkill"
+              class="px-4 py-2 text-slate-300 hover:text-blue-400 uppercase font-nunito font-bold"
               >Skills</a
             >
             <a
-              href="#"
-              class="block px-3 py-2 text-slate-300 hover:bg-blue-300 rounded-xl uppercase font-nunito"
-              >Blog</a
+              href="#testimoni"
+              class="px-4 py-2 text-slate-300 hover:text-blue-400 uppercase font-nunito font-bold"
+              >Testimonial</a
             >
             <a
-              href="#"
-              class="block bg-blue-500 hover:bg-blue-300 rounded-xl px-4 py-2 font-nunito font-bold text-slate-200 justify-center items-center"
+              href="#contactMe"
+              class="mt-2 bg-blue-500 hover:bg-blue-400 rounded-xl px-4 py-2 text-center font-nunito font-bold text-slate-200 transition"
               >Contact Me</a
             >
           </div>
@@ -178,7 +178,7 @@
 
         <div class="order-1 lg:order-1">
           <h1 class="font-nunito text-5xl font-bold leading-tight text-white">
-            Hello, I'm <span class="text-blue">Zaar</span>
+            Hello, I'm <span class="text-blue">Zaa</span>
           </h1>
           <h2 class="font-nunito text-3xl font-semibold text-slate-200">
             Web / Mobile Developer
@@ -569,7 +569,7 @@
 
     <!-- Copyright -->
     <div class="mt-12 text-center text-sm text-slate-400">
-      Copyright © 2024 — All Rights Reserved by <span class="text-white font-semibold">ZAAR</span>
+      Copyright © 2025 — All Rights Reserved by <span class="text-white font-semibold">Zaa</span>
     </div>
   </div>
 </footer>
